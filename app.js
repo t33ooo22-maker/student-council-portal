@@ -1,5 +1,12 @@
 // เว็บไซต์ตัวอย่าง Student Council — ทำงานได้โดยไม่ต้องตั้งค่า Firebase สำหรับการดูหน้าเว็บ
-// กรอกค่าจาก Firebase Console ใน firebase-config.js เมื่อพร้อมเชื่อมฐานข้อมูลจริง
+// กรอกค่าจาก const firebaseConfig = {
+  apiKey: "AIzaSyDkhXbRmTjtLSd5A_Z1E7b92ML19SfQOGk",
+  authDomain: "student-council-portal-b3a53.firebaseapp.com",
+  projectId: "student-council-portal-b3a53",
+  storageBucket: "student-council-portal-b3a53.firebasestorage.app",
+  messagingSenderId: "215972325644",
+  appId: "1:215972325644:web:2806ddd973d459c8fa8129"
+}; เมื่อพร้อมเชื่อมฐานข้อมูลจริง
 const sampleActivities = [
   { id: "sample-1", title: "กิจกรรมจิตอาสาพัฒนาโรงเรียน", date: "2026-10-22", status: "กำลังดำเนินการ", description: "ร่วมกันดูแลพื้นที่ส่วนกลางและสร้างสภาพแวดล้อมที่น่าอยู่", icon: "♧" },
   { id: "sample-2", title: "ประชุมสภานักเรียนประจำเดือน", date: "2026-10-08", status: "เสร็จสิ้น", description: "สรุปผลการดำเนินงานและวางแผนกิจกรรมของเดือนถัดไป", icon: "✦" },
