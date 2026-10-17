@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
 
 import {
@@ -376,37 +375,20 @@ onAuthStateChanged(auth, async (user) => {
     setupAccountControls();
     renderActivities([]);
     return;
+function notify(message) {
+  const toast = document.querySelector("#toast");
+
+  if (!toast) {
+    alert(message);
+    return;
   }
 
-  try {
-    const profileSnapshot = await getDoc(doc(db, "users", user.uid));
+  toast.textContent = message;
+  toast.hidden = false;
+  toast.classList.add("show");
 
-    if (!profileSnapshot.exists()) {
-      await signOut(auth);
-      notify("ไม่พบข้อมูลบทบาทผู้ใช้ใน Firestore");
-      return;
-    }
-
-    const role = profileSnapshot.data().role;
-
-    if (!["president", "committee"].includes(role)) {
-      await signOut(auth);
-      notify("บัญชีนี้ไม่มีบทบาทที่ได้รับอนุญาต");
-      return;
-    }
-
-    currentRole = role;
-    setupAccountControls();
-    setupAssignmentField();
-
-    const addButton = $("#addActivityOpen");
-    if (addButton) {
-      addButton.hidden = currentRole !== "president";
-    }
-
-    listenActivities();
-  } catch (error) {
-    console.error(error);
-    notify("ตรวจสอบข้อมูล users และ Firestore Rules อีกครั้ง");
-  }
-});
+  clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 4000);
+}
