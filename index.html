@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075c3b">
+  <title>สภานักเรียน | Student Council</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="หน้าแรก">
+      <span class="brand-mark">SC</span>
+      <span><b>STUDENT COUNCIL</b><small>ระบบบริหารงานสภานักเรียน</small></span>
+    </a>
+    <nav><a href="#dashboard">ภาพรวม</a><a href="#activities">กิจกรรม</a><a href="#announcements">ประกาศ</a></nav>
+    <button id="loginOpen" class="button button-light">เข้าสู่ระบบ</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> STUDENT LEADERSHIP • ปีการศึกษา 2569</div>
+        <h1>ก้าวไปด้วยกัน<br><span>สร้างสรรค์โรงเรียน</span></h1>
+        <p>พื้นที่กลางสำหรับประธานและกรรมการ จัดการงาน กิจกรรม ข่าวสาร และติดตามผลการทำงานร่วมกันอย่างโปร่งใส</p>
+        <div class="hero-actions"><a class="button button-gold" href="#dashboard">ดูภาพรวม <span>↗</span></a><a class="text-link" href="#activities">สำรวจกิจกรรม <span>→</span></a></div>
+        <div class="hero-proof"><div class="avatars"><span>ป</span><span>ส</span><span>น</span></div><div><b>ร่วมคิด ร่วมทำ ร่วมพัฒนา</b><small>ทุกเสียงมีความหมาย</small></div></div>
+      </div>
+      <div class="hero-art" aria-label="ภาพประกอบสภานักเรียน">
+        <div class="art-ring ring-a"></div><div class="art-ring ring-b"></div>
+        <div class="art-card card-top"><span class="mini-icon">✦</span><span><b>LEAD WITH HEART</b><small>เป็นผู้นำด้วยหัวใจ</small></span></div>
+        <div class="crest"><div class="crest-inner"><span>SC</span><i>✦</i></div><small>STUDENT COUNCIL</small></div>
+        <div class="art-card card-bottom"><span class="chart-icon">↗</span><span><b>MAKE AN IMPACT</b><small>เปลี่ยนไอเดียให้เป็นจริง</small></span></div>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✦</span>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">AT A GLANCE</div><h2>ภาพรวมการดำเนินงาน</h2><p>ติดตามงานและกิจกรรมได้ในที่เดียว</p></div><span class="term-pill">ปีการศึกษา 2569 <span>⌄</span></span></div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-icon green-icon">▦</div><div class="stat-label">กิจกรรมทั้งหมด</div><div class="stat-value" id="activityCount">03</div><div class="stat-note"><span>✦</span> กิจกรรมตัวอย่าง</div></article>
+        <article class="stat-card"><div class="stat-icon gold-icon">✓</div><div class="stat-label">งานที่ดำเนินการแล้ว</div><div class="stat-value" id="doneCount">02</div><div class="stat-note">พร้อมสร้างสิ่งดี ๆ ต่อไป</div></article>
+        <article class="stat-card"><div class="stat-icon mint-icon">◷</div><div class="stat-label">งานที่กำลังดำเนินการ</div><div class="stat-value" id="pendingCount">01</div><div class="stat-note">ติดตามความคืบหน้า</div></article>
+        <article class="stat-card highlight-stat"><div class="stat-icon white-icon">♧</div><div class="stat-label">เป้าหมายของเรา</div><div class="stat-value">100<span>%</span></div><div class="stat-note">ทำงานด้วยความรับผิดชอบ</div></article>
+      </div>
+    </section>
+
+    <section id="activities" class="section activity-section">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">OUR MOVEMENT</div><h2>กิจกรรมและงานล่าสุด</h2><p>ตัวอย่างข้อมูลสำหรับเริ่มต้น สามารถเพิ่มงานได้หลังเข้าสู่ระบบ</p></div><button id="addActivityOpen" class="button button-green">＋ เพิ่มกิจกรรม</button></div>
+      <div id="activityList" class="activity-grid"></div>
+    </section>
+
+    <section id="announcements" class="announcement-band">
+      <div class="announcement-symbol">✦</div><div><div class="eyebrow">STAY CONNECTED</div><h2>ข่าวสารและประกาศ</h2><p>ติดตามข่าวกิจกรรมและความเคลื่อนไหวจากสภานักเรียน</p></div><a class="button button-gold" href="mailto:studentcouncil@example.com">ติดต่อสภานักเรียน ↗</a>
+    </section>
+
+    <section class="roles-section section">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">ONE TEAM, TWO ROLES</div><h2>ทำงานร่วมกันอย่างเป็นระบบ</h2><p>ระบบสำหรับทีมสภานักเรียนโดยเฉพาะ</p></div></div>
+      <div class="roles-grid two-roles">
+        <article class="role-card"><span class="role-number">01</span><div class="role-symbol gold-text">♛</div><h3>ประธานนักเรียน</h3><p>จัดการงานและกิจกรรม มอบหมายงานให้กรรมการ ตรวจสอบรายงาน และติดตามความคืบหน้าของทีม</p></article>
+        <article class="role-card"><span class="role-number">02</span><div class="role-symbol">♧</div><h3>กรรมการสภานักเรียน</h3><p>ดูงานที่ได้รับมอบหมาย อัปเดตสถานะงาน และส่งรายงานผลการดำเนินงานให้ประธานตรวจสอบ</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">SC</span><span><b>STUDENT COUNCIL</b><small>ร่วมสร้างโรงเรียนที่ดีกว่า</small></span></a><span>© 2569 Student Council Portal</span></footer>
+
+  <dialog id="loginDialog" class="modal">
+    <form method="dialog" class="modal-head"><div><div class="eyebrow dark-eyebrow">WELCOME BACK</div><h2>เข้าสู่ระบบ</h2><p>ลงชื่อเข้าใช้เพื่อจัดการข้อมูลสภานักเรียน</p></div><button class="close-button" aria-label="ปิด">×</button></form>
+    <form id="loginForm" class="modal-form">
+      <label>อีเมล<input id="email" type="email" placeholder="name@school.ac.th" required autocomplete="username"></label>
+      <label>รหัสผ่าน<input id="password" type="password" placeholder="กรอกรหัสผ่าน" required autocomplete="current-password"></label>
+      <button class="button button-green full-button" type="submit">เข้าสู่ระบบ</button>
+      <p id="loginMessage" class="form-message">* ต้องตั้งค่า Firebase ก่อนใช้งานระบบบัญชีจริง</p>
+    </form>
+  </dialog>
+
+  <dialog id="activityDialog" class="modal">
+    <form method="dialog" class="modal-head"><div><div class="eyebrow dark-eyebrow">NEW ACTIVITY</div><h2>เพิ่มกิจกรรม</h2><p>บันทึกข้อมูลกิจกรรมใหม่</p></div><button class="close-button" aria-label="ปิด">×</button></form>
+    <form id="activityForm" class="modal-form">
+      <label>ชื่อกิจกรรม<input id="activityTitle" required maxlength="100" placeholder="เช่น กิจกรรมจิตอาสา"></label>
+      <label>วันที่<input id="activityDate" type="date" required></label>
+      <label>สถานะ<select id="activityStatus"><option value="กำลังดำเนินการ">กำลังดำเนินการ</option><option value="เสร็จสิ้น">เสร็จสิ้น</option></select></label>
+      <label>รายละเอียด<textarea id="activityDescription" rows="3" maxlength="500" placeholder="รายละเอียดกิจกรรม"></textarea></label>
+      <button class="button button-green full-button" type="submit">บันทึกกิจกรรม</button>
+      <p id="activityMessage" class="form-message">ข้อมูลตัวอย่างจะเก็บในอุปกรณ์นี้ จนกว่าจะเชื่อม Firebase</p>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
